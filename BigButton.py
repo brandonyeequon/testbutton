@@ -17,15 +17,16 @@ def generate_loving_message():
                     - She loves Pokemon
                     - She is a straight A student. Very, very smart.
                     - She loves the TV show NIKITA
-                    - She loves to include people
+                    - She loves to include people, and help them feel loved
                     - She cooks a killer creamy tomato pasta
+                    - She makes a killer teriyaki chicken
                     - She speaks fluent Japanese. We met in Japan. 
                     - She loves reading. Recently she's read fourth wing and mistborn.
                     - She can't focus until the house is clean"""
                 },
                 {
                     "role": "user",
-                    "content": """Write creative witty, or funny note to Lizzy. Keep it really short! No more than 5 lines. 
+                    "content": """Write creative, witty, or funny note to Lizzy. Keep it really short! No more than 5 lines. 
                     Don't be cheesy or cliche. Write it either completely in English, or completely in Japanese. (mostly write in English)
                     Choose 1 or 2 facts about lizzy to write this note."""
                 }
