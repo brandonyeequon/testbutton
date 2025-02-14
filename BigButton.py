@@ -4,7 +4,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 
 # Initialize OpenAI client
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 def generate_loving_message():
     try:
