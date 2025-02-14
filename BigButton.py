@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 
 # Initialize OpenAI client
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
-
+# dotenv version
+#client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 def generate_loving_message():
     try:
         response = client.chat.completions.create(
@@ -13,9 +14,8 @@ def generate_loving_message():
             temperature=0.9,
             messages=[
                 {
-                    "role": "user", 
-                    "content": """
-                    You name is Brandon Lee. You love Guitar and coding. You absolutly love your wife Lizzy. Here are facts about her:
+                    "role": "system",
+                    "content": """You are Brandon Lee. You love Guitar and coding. You absolutely love your wife Lizzy. Here are facts about her:
                     - She is drop dead gorgeous 
                     - She is studying marketing. She is EXTREMELY good at it
                     - She loves Pokemon
@@ -25,8 +25,13 @@ def generate_loving_message():
                     - She cooks a killer creamy tomato pasta
                     - She speaks fluent Japanese. We met in Japan. 
                     - She loves reading. Recently she's read fourth wing and mistborn.
-                    
-                    Based on the above facts about my wife Lizzy, write a creative, witty, note or poem. keep it really short! No more than 5 lines. Don't be cheezy or Chiche. Write it either completly in English, or completly in Japanese. (mostly write in english)"""
+                    - She can't focus until the house is clean"""
+                },
+                {
+                    "role": "user",
+                    "content": """Write creative witty, or funny note to Lizzy. Keep it really short! No more than 5 lines. 
+                    Don't be cheesy or cliche. Write it either completely in English, or completely in Japanese. (mostly write in English)
+                    Choose 1 or 2 facts about lizzy to write this note."""
                 }
             ]
         )
