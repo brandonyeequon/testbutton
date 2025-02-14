@@ -19,7 +19,6 @@ def generate_loving_message():
                     - She loves the TV show NIKITA
                     - She loves to include people, and help them feel loved
                     - She cooks a killer creamy tomato pasta
-                    - She makes a killer teriyaki chicken
                     - She speaks fluent Japanese. We met in Japan. 
                     - She loves reading. Recently she's read fourth wing and mistborn.
                     - She can't focus until the house is clean"""
