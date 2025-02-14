@@ -106,9 +106,9 @@ st.markdown("""
                 left: 50%; 
                 transform: translateX(-50%);
                 text-align: center;
-                font-size: 14px;
+                font-size: 16px;
                 color: #666;'>
-        Want more love? Just press the button again! 💕
+        Want more love? Just press the button again!
     </div>
 """, unsafe_allow_html=True)
             
