@@ -106,7 +106,7 @@ st.markdown("""
                 left: 50%; 
                 transform: translateX(-50%);
                 text-align: center;
-                font-size: 16px;
+                font-size: 18px;
                 color: #666;'>
         Want more love? Just press the button again!
     </div>
