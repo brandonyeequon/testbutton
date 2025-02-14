@@ -1,11 +1,8 @@
 import streamlit as st
 from openai import OpenAI
-#from dotenv import load_dotenv
 
-# Initialize OpenAI client
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
-# dotenv version
-#client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
 def generate_loving_message():
     try:
         response = client.chat.completions.create(
@@ -101,4 +98,17 @@ with col2:
                 }}
                 </style>
             """.format(message), unsafe_allow_html=True)
+
+# Add footer
+st.markdown("""
+    <div style='position: fixed; 
+                bottom: 10px; 
+                left: 50%; 
+                transform: translateX(-50%);
+                text-align: center;
+                font-size: 14px;
+                color: #666;'>
+        Want more love? Just press the button again! 💕
+    </div>
+""", unsafe_allow_html=True)
             
